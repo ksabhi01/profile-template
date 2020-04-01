@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Profile Template</title>
+</head>
+<body>
+    <section id="forms">
+    <form>
+        <h1>Sign Up</h1> 
+        <fieldset>
+            <legend><span class="number">1</span> Basic information</legend>
+            <input type="text" id="name" name="user_name" placeholder="Name"  />
+            <input type="email" id="email" name="user_name" placeholder="Email" />
+        </fieldset>
+        <fieldset>
+            <legend><span class="number">2</span> Your profile</legend>
+            <textarea id="bio" name="user_bio" placeholder="Your text here. Write as much as you want."></textarea>
+            <input type="file" id="file" accept="image/jpeg" placeholder="Choose Your File"  />
+            <label for"skills">Select your Skills</label>
+            <select id="skills" onchange="skillFunction()">
+                <optgroup label="Tell Us Your Skills">
+                <option value="">Select</option>    
+                <option value="frontend_developer">Front-End Developer</option>
+                <option value="php_developer">PHP Developer</option>
+                <option value="python_developer">Python Developer</option>
+                <option value="web_designer">Web Designer</option>
+                </optgroup>
+            </select>
+            <div id="cross-1"></div>
+            
+            <label for"area">Area Of Work</label>
+            <select id="area" onchange="areaFunction()">
+                <optgroup label="Specify Your Area">
+                    <option value="select">Select</option>
+                    <option value="Education">Education</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Marketing">Marketing</option>
+                </optgroup>
+            </select>
+            <div id="cross-2"></div>
+            <label for"all-color">Choose The Color Of Your Template</label>
+            <input type="color" id="all-color" placeholder="Choose Your Color" />
+        </fieldset>      
+        <button type="button" id="submit-button" onclick="colorChange()">Submit</button> 
+    </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
